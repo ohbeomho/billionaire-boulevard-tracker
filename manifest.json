@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Billionaire Boulevard Tracker",
+    "version": "1.0.0",
+    "description": "Tracks your progress on the Billionaire Boulevard route in Wanderer Toolbox",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://wanderer-toolbox.com/routes/billionaire-boulevard/"
+            ],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
