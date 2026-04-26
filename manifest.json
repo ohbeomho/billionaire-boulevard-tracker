@@ -10,6 +10,7 @@
                 "https://wanderer-toolbox.com/routes/billionaire-boulevard/"
             ],
             "js": ["content.js"],
+            "css": ["style.css"],
             "run_at": "document_end"
         }
     ]
