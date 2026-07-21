@@ -1,17 +1,25 @@
 {
-    "manifest_version": 3,
-    "name": "Billionaire Boulevard Tracker",
-    "version": "1.0.0",
-    "description": "Tracks your progress on the Billionaire Boulevard route in Wanderer Toolbox",
-    "permissions": ["activeTab"],
-    "content_scripts": [
-        {
-            "matches": [
-                "https://wanderer-toolbox.com/routes/billionaire-boulevard/"
-            ],
-            "js": ["content.js"],
-            "css": ["style.css"],
-            "run_at": "document_end"
-        }
-    ]
+	"manifest_version": 3,
+	"name": "Billionaire Boulevard Tracker",
+	"version": "1.0.0",
+	"description": "Tracks your progress on the Billionaire Boulevard route in Wanderer Toolbox",
+	"permissions": [],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://wanderer-toolbox.com/routes/billionaire-boulevard/*"
+			],
+			"js": ["content.js"],
+			"css": ["style.css"],
+			"run_at": "document_end"
+		}
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "billionaire-boulevard-tracker@wanderer-toolbox.com",
+			"data_collection_permissions": {
+                "required": ["none"]
+            }
+		}
+	}
 }
